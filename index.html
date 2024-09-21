@@ -16,13 +16,16 @@
 </head>
 <body>
     <h1>Quiz con Regalo</h1>
-    <img src="Diego1.jpeg" alt="Diego cavaliere" width="500" height="600">
+    <img src="Diego1.jpeg" alt="Diego cavaliere" width="300" height="500">
     <form id="quizForm">
         <label for="question1">Vado all'italmark di villanuova perchè all'italmark di roè sono tutti...</label><br>
         <input type="text" id="question1" name="question1"><br><br>
 
         <label for="question2">Se vai in Islanda e noleggi una macchina, sulle gomme troverai dei... (Dopo qualche giorno si toglieranno e dovrai driftare in rotonda)</label><br>
         <input type="text" id="question2" name="question2"><br><br>
+
+        <label for="question3">Alberto è un esponente politico del partito politico...</label><br>
+        <input type="text" id="question3" name="question3"><br><br>
 
         <button type="button" onclick="checkAnswers()">Invia</button>
     </form>
@@ -31,14 +34,15 @@
         <h2>Congratulazioni!</h2>
         <p>Hai risposto correttamente a tutte le domande. Ecco il tuo regalo Diego!</p>
         <h1>23843-28742-34AAA</h1>
-         <img src="Diego2.jpeg" alt="Diego letsgoski" width="500" height="600">
+         <img src="Diego2.jpeg" alt="Diego letsgoski" width="300" height="500">
     </div>
 
     <script>
         function checkAnswers() {
             const answer1 = document.getElementById('question1').value.toLowerCase();
             const answer2 = document.getElementById('question2').value.toLowerCase();
-            if (answer1 === 'ritardati' && answer2 === 'chiodini') {
+            const answer3 = document.getElementById('question3').value.toLowerCase();
+            if (answer1 === 'ritardati' && answer2 === 'chiodini' && answer2 === 'casa pound') {
                 document.getElementById('quizForm').classList.add('hidden');
                 document.getElementById('giftMessage').classList.remove('hidden');
             } else {
