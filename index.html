@@ -17,10 +17,10 @@
 <body>
     <h1>Quiz con Regalo</h1>
     <form id="quizForm">
-        <label for="question1">Qual è la capitale d'Italia?</label><br>
+        <label for="question1">Vado all'italmark di villanuova perchè all'italmark di roè sono tutti...</label><br>
         <input type="text" id="question1" name="question1"><br><br>
 
-        <label for="question2">Qual è il colore del cielo in una giornata serena?</label><br>
+        <label for="question2">Se vai in Islanda e noleggi una macchina, sulle gomme troverai dei... (Dopo qualche giorno si toglieranno e dovrai driftare in rotonda)</label><br>
         <input type="text" id="question2" name="question2"><br><br>
 
         <button type="button" onclick="checkAnswers()">Invia</button>
@@ -28,14 +28,15 @@
 
     <div id="giftMessage" class="hidden">
         <h2>Congratulazioni!</h2>
-        <p>Hai risposto correttamente a tutte le domande. Ecco il tuo regalo!</p>
+        <p>Hai risposto correttamente a tutte le domande. Ecco il tuo regalo Diego!</p>
+        <h1>23843-28742-34AAA</h1>
     </div>
 
     <script>
         function checkAnswers() {
             const answer1 = document.getElementById('question1').value.toLowerCase();
             const answer2 = document.getElementById('question2').value.toLowerCase();
-            if (answer1 === 'roma' && answer2 === 'blu') {
+            if (answer1 === 'ritardati' && answer2 === 'chiodini') {
                 document.getElementById('quizForm').classList.add('hidden');
                 document.getElementById('giftMessage').classList.remove('hidden');
             } else {
