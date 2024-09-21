@@ -1,5 +1,47 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting...</title>
-<meta http-equiv="refresh" content="0; URL=https://www.instagram.com/reel/CxRncQTr4Cj/?igshid=NzZhOTFlYzFmZQ==">
-<link rel="canonical" href="https://www.instagram.com/reel/CxRncQTr4Cj/?igshid=NzZhOTFlYzFmZQ==">
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz con Regalo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz con Regalo</h1>
+    <form id="quizForm">
+        <label for="question1">Qual è la capitale d'Italia?</label><br>
+        <input type="text" id="question1" name="question1"><br><br>
+
+        <label for="question2">Qual è il colore del cielo in una giornata serena?</label><br>
+        <input type="text" id="question2" name="question2"><br><br>
+
+        <button type="button" onclick="checkAnswers()">Invia</button>
+    </form>
+
+    <div id="giftMessage" class="hidden">
+        <h2>Congratulazioni!</h2>
+        <p>Hai risposto correttamente a tutte le domande. Ecco il tuo regalo!</p>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const answer1 = document.getElementById('question1').value.toLowerCase();
+            const answer2 = document.getElementById('question2').value.toLowerCase();
+            if (answer1 === 'roma' && answer2 === 'blu') {
+                document.getElementById('quizForm').classList.add('hidden');
+                document.getElementById('giftMessage').classList.remove('hidden');
+            } else {
+                alert('Risposte errate. Riprova!');
+            }
+        }
+    </script>
+</body>
+</html>
