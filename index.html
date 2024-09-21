@@ -30,6 +30,9 @@
          <label for="question3">Se avessi una figlia non la farei mai andare in discoteca perché le metterebero le mani nella...</label><br>
         <input type="text" id="question4" name="question4"><br><br>
 
+        <label for="question3">Avrei voluto fare la porca con...</label><br>
+        <input type="text" id="question5" name="question5"><br><br>
+
         <button type="button" onclick="checkAnswers()">Invia</button>
     </form>
 
@@ -46,7 +49,8 @@
             const answer2 = document.getElementById('question2').value.toLowerCase();
             const answer3 = document.getElementById('question3').value.toLowerCase();
             const answer4 = document.getElementById('question4').value.toLowerCase();
-            if (answer1 === 'ritardati' && answer2 === 'chiodini' && answer3 === 'casa pound'  && answer4 === 'figa') {
+            const answer4 = document.getElementById('question5').value.toLowerCase();
+            if (answer1 === 'ritardati' && answer2 === 'chiodini' && answer3 === 'casa pound'  && answer4 === 'figa'&& answer4 === 'ted') {
                 document.getElementById('quizForm').classList.add('hidden');
                 document.getElementById('giftMessage').classList.remove('hidden');
             } else {
