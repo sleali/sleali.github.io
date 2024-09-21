@@ -36,8 +36,10 @@
 
         <label for="question6">Qual è il nome del tuo acerrimo nemico ?</label><br>
         <input type="text" id="question6" name="question6"><br><br>
+    
+        <label for="question7">Qual è il nome della tipa che ti ha fatto cacciare dalla Capannina ?</label><br>
+        <input type="text" id="question7" name="question7"><br><br>
         
-            
         <button type="button" onclick="checkAnswers()">Invia</button>
     </form>
 
@@ -56,7 +58,8 @@
             const answer4 = document.getElementById('question4').value.toLowerCase();
             const answer5 = document.getElementById('question5').value.toLowerCase();
             const answer6 = document.getElementById('question6').value.toLowerCase();
-            if (answer1 === 'ritardati' && answer2 === 'chiodini' && answer3 === 'casa pound'  && answer4 === 'figa' && answer5 === 'ted' && answer6 === 'fulvio') {
+            const answer7 = document.getElementById('question7').value.toLowerCase();
+            if (answer1 === 'ritardati' && answer2 === 'chiodini' && answer3 === 'casa pound'  && answer4 === 'figa' && answer5 === 'ted' && answer6 === 'fulvio' && answer7 === 'matilde') {
                 document.getElementById('quizForm').classList.add('hidden');
                 document.getElementById('giftMessage').classList.remove('hidden');
             } else {
